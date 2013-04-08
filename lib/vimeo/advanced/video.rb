@@ -110,7 +110,15 @@ module Vimeo
       create_api_method :set_title,
                         "vimeo.videos.setTitle",
                         :required => [:video_id, :title]
-      
+
+      create_api_method :set_download_privacy,
+                        "vimeo.videos.setDownloadPrivacy",
+                        :required => [:video_id, :download]
+
+      create_api_method :get_source_file_urls,
+                        "vimeo.videos.getSourceFileUrls",
+                        :required => [:video_id]
+
       # comments
       create_api_method :add_comment,
                         "vimeo.videos.comments.addComment",
